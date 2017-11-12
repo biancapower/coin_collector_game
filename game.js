@@ -65,11 +65,11 @@ function createBadge() {
 function itemHandler(player, item) {
   item.kill();
   if (item.key === 'coin'){
-    currentScore = currentScore + 10;
+    currentScore = currentScore + 20;
   } else if (item.key === 'poison'){
-    currentScore = currentScore - 25;
+    currentScore = currentScore - 30;
   } else if (item.key === 'star'){
-    currentScore = currentScore + 25;
+    currentScore = currentScore + 50;
   }
   if (currentScore === winningScore) {
       createBadge();
@@ -150,7 +150,7 @@ window.onload = function () {
     if (jumpButton.isDown && (player.body.onFloor() || player.body.touching.down)) {
       player.body.velocity.y = -400;
     }
-    // when the player winw the game
+    // when the player wins the game
     if (won) {
       winningMessage.text = "YOU WIN!!!";
     }
