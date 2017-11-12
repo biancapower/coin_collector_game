@@ -71,7 +71,7 @@ function itemHandler(player, item) {
   } else if (item.key === 'star'){
     currentScore = currentScore + 50;
   }
-  if (currentScore === winningScore) {
+  if (currentScore >= winningScore) {
       createBadge();
   }
 }
